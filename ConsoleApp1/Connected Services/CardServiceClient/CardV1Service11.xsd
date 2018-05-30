@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://ws.ips.mastercardworldwide.com/type/transaction/v1" elementFormDefault="qualified" targetNamespace="http://ws.ips.mastercardworldwide.com/type/transaction/v1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://g0qatools01/GDQATools/GDQA_IPSSimulator/GDQA_IPSSimulator_Card/CardV1Service.svc?xsd=xsd9" namespace="http://ws.ips.mastercardworldwide.com/type/currency/v1" />
+  <xs:complexType name="ArrayOfFeeOverrideInfoType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="feeOverrideInfo" type="tns:FeeOverrideInfoType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="FeeOverrideInfoType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="feeTypeCode" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="feeOverrideIndicator" type="xs:boolean" />
+      <xs:element xmlns:q1="http://ws.ips.mastercardworldwide.com/type/currency/v1" minOccurs="0" maxOccurs="1" name="feeAmount" type="q1:NonNegativeCurrencyAmountType" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

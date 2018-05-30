@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://ws.ips.mastercardworldwide.com/type/securityassertion/v1" elementFormDefault="qualified" targetNamespace="http://ws.ips.mastercardworldwide.com/type/securityassertion/v1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://g0qatools01/GDQATools/GDQA_IPSSimulator/GDQA_IPSSimulator_Card/CardV1Service.svc?xsd=xsd12" namespace="http://ws.ips.mastercardworldwide.com/type/security/v1" />
+  <xs:element name="simpleSecurityAssertion" type="tns:AbstractSimpleSecurityAssertionType" />
+  <xs:complexType name="AbstractSimpleSecurityAssertionType" abstract="true" />
+  <xs:complexType name="CsrSimpleSecurityAssertionType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:AbstractSimpleSecurityAssertionType">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="servicingCenter" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="locations" nillable="true" type="tns:ArrayOfString" />
+        </xs:sequence>
+        <xs:attribute xmlns:q1="http://ws.ips.mastercardworldwide.com/type/security/v1" name="authenticationStrength" type="q1:CsrAuthenticationStrengthType" use="required" />
+        <xs:attribute name="userId" type="xs:string" />
+        <xs:attribute name="role" type="xs:string" />
+        <xs:attribute name="channel" type="xs:string" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfString">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="location" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CardHolderSimpleSecurityAssertionType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:AbstractSimpleSecurityAssertionType">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="institution" type="xs:string" />
+        </xs:sequence>
+        <xs:attribute xmlns:q2="http://ws.ips.mastercardworldwide.com/type/security/v1" name="authenticationStrength" type="q2:CardHolderAuthenticationStrengthType" use="required" />
+        <xs:attribute name="userId" type="xs:string" />
+        <xs:attribute name="role" type="xs:string" />
+        <xs:attribute name="channel" type="xs:string" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

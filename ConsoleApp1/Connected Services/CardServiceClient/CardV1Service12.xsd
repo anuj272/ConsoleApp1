@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://ws.ips.mastercardworldwide.com/type/messagebase/v1" elementFormDefault="qualified" targetNamespace="http://ws.ips.mastercardworldwide.com/type/messagebase/v1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://g0qatools01/GDQATools/GDQA_IPSSimulator/GDQA_IPSSimulator_Card/CardV1Service.svc?xsd=xsd2" namespace="http://ws.ips.mastercardworldwide.com/type/execution/v1" />
+  <xs:complexType name="RequestBaseType" abstract="true">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MessageBaseType" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="MessageBaseType" abstract="true" />
+  <xs:complexType name="ReturnBaseType" abstract="true">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MessageBaseType">
+        <xs:attribute xmlns:q1="http://ws.ips.mastercardworldwide.com/type/execution/v1" name="statusCode" type="q1:StatusCodeType" />
+        <xs:attribute xmlns:q2="http://ws.ips.mastercardworldwide.com/type/execution/v1" name="faultCode" type="q2:FaultCodeType" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ResponseBaseType" abstract="true">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ReturnBaseType" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ResponseListOutputBaseType">
+    <xs:attribute name="errorCode" type="xs:string" />
+    <xs:attribute xmlns:q3="http://ws.ips.mastercardworldwide.com/type/execution/v1" name="statusCode" type="q3:StatusCodeType" />
+  </xs:complexType>
+  <xs:complexType name="ResponseHolderBaseType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ReturnBaseType">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="errorReason" type="xs:string" />
+        </xs:sequence>
+        <xs:attribute name="subOpExecUuid" type="xs:string" />
+        <xs:attribute xmlns:q4="http://ws.ips.mastercardworldwide.com/type/execution/v1" name="role" type="q4:ExecutionSystemRoleType" />
+        <xs:attribute name="subRole" type="xs:string" />
+        <xs:attribute name="serverIds">
+          <xs:simpleType>
+            <xs:list itemType="xs:string" />
+          </xs:simpleType>
+        </xs:attribute>
+        <xs:attribute name="errorCategory" type="xs:string" />
+        <xs:attribute name="errorCode" type="xs:string" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ResponsePartBaseType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResponseHolderBaseType" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="OutputBaseType" abstract="true">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ReturnBaseType">
+        <xs:attribute name="opExecUuid" type="xs:string" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="AtomicOperationOutputBaseType" abstract="true">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OutputBaseType">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="errorReason" type="xs:string" />
+        </xs:sequence>
+        <xs:attribute name="subOpExecUuid" type="xs:string" />
+        <xs:attribute xmlns:q5="http://ws.ips.mastercardworldwide.com/type/execution/v1" name="role" type="q5:ExecutionSystemRoleType" />
+        <xs:attribute name="subRole" type="xs:string" />
+        <xs:attribute name="serverIds">
+          <xs:simpleType>
+            <xs:list itemType="xs:string" />
+          </xs:simpleType>
+        </xs:attribute>
+        <xs:attribute name="errorCategory" type="xs:string" />
+        <xs:attribute name="errorCode" type="xs:string" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CompositeOperationOutputBaseType" abstract="true">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OutputBaseType" />
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

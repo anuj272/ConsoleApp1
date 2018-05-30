@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://ws.ips.mastercardworldwide.com/type/cardholder/v1" elementFormDefault="qualified" targetNamespace="http://ws.ips.mastercardworldwide.com/type/cardholder/v1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://g0qatools01/GDQATools/GDQA_IPSSimulator/GDQA_IPSSimulator_Card/CardV1Service.svc?xsd=xsd3" namespace="http://ws.ips.mastercardworldwide.com/type/common/v1" />
+  <xs:import schemaLocation="https://g0qatools01/GDQATools/GDQA_IPSSimulator/GDQA_IPSSimulator_Card/CardV1Service.svc?xsd=xsd8" namespace="http://ws.ips.mastercardworldwide.com/type/person/v1" />
+  <xs:import schemaLocation="https://g0qatools01/GDQATools/GDQA_IPSSimulator/GDQA_IPSSimulator_Card/CardV1Service.svc?xsd=xsd4" namespace="http://ws.ips.mastercardworldwide.com/type/geo/v1" />
+  <xs:complexType name="CardHolderAddressType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://ws.ips.mastercardworldwide.com/type/common/v1" base="q1:AbstractAddressBaseType" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CardHolderDetailsType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CardHolderInfoType">
+        <xs:sequence>
+          <xs:element xmlns:q2="http://ws.ips.mastercardworldwide.com/type/person/v1" minOccurs="0" maxOccurs="1" name="gender" type="q2:GenderType" />
+          <xs:element minOccurs="0" maxOccurs="1" name="employer" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="nickname" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="vipStatusIndicator" type="xs:boolean" />
+          <xs:element minOccurs="0" maxOccurs="1" name="cardHolderMaidenName" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="birthCity" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CardHolderInfoType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CardHolderInfoBaseType">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="addressList" type="tns:ArrayOfCardHolderAddressType" />
+          <xs:element minOccurs="0" maxOccurs="1" name="mothersMaidenName" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CardHolderInfoBaseType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="cardHolderName" type="tns:CardHolderNameType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="dateOfBirth" type="xs:date" />
+      <xs:element xmlns:q3="http://ws.ips.mastercardworldwide.com/type/common/v1" minOccurs="0" maxOccurs="1" name="phoneNumbers" type="q3:ArrayOfPhoneNumberWithDateRangeInfoType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="emailAddress" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="taxId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CardHolderNameType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://ws.ips.mastercardworldwide.com/type/person/v1" base="q4:AbstractHumanNameType" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CardHolderSearchResultType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CardHolderInfoBaseType">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="relationshipCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="cardHolderId" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="cardNumber" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="cardStatusCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="cardStatusDate" type="xs:date" />
+          <xs:element minOccurs="0" maxOccurs="1" name="cardStock" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="programTypeCode" type="xs:string" />
+          <xs:element xmlns:q5="http://ws.ips.mastercardworldwide.com/type/common/v1" minOccurs="0" maxOccurs="1" name="address" type="q5:AbstractAddressBaseType" />
+          <xs:element minOccurs="0" maxOccurs="1" name="accountNumber" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="mothersMaidenName" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfCardHolderAddressType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="address" type="tns:CardHolderAddressType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CardHolderDetailsV1R1Type">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CardHolderInfoV1R1Type">
+        <xs:sequence>
+          <xs:element xmlns:q6="http://ws.ips.mastercardworldwide.com/type/person/v1" minOccurs="0" maxOccurs="1" name="gender" type="q6:GenderType" />
+          <xs:element minOccurs="0" maxOccurs="1" name="employer" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="nickname" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="vipStatusIndicator" type="xs:boolean" />
+          <xs:element minOccurs="0" maxOccurs="1" name="cardHolderMaidenName" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="birthCity" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CardHolderInfoV1R1Type">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CardHolderInfoBaseV1R1Type">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="addressList" type="tns:ArrayOfCardHolderAddressType" />
+          <xs:element minOccurs="0" maxOccurs="1" name="mothersMaidenName" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CardHolderInfoBaseV1R1Type">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="cardholderFullName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="cardHolderName" type="tns:CardHolderNameV1R1Type" />
+      <xs:element minOccurs="0" maxOccurs="1" name="dateOfBirth" type="xs:date" />
+      <xs:element xmlns:q7="http://ws.ips.mastercardworldwide.com/type/common/v1" minOccurs="0" maxOccurs="1" name="phoneNumbers" type="q7:ArrayOfPhoneNumberWithDateRangeInfoType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="emailAddress" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="taxId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CardHolderNameV1R1Type">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://ws.ips.mastercardworldwide.com/type/person/v1" base="q8:AbstractHumanNameV1R1Type" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CardHolderSearchResultV1R1Type">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CardHolderInfoBaseV1R1Type">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="relationshipCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="cardHolderId" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="cardNumber" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="cardStatusCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="cardStatusDate" type="xs:date" />
+          <xs:element minOccurs="0" maxOccurs="1" name="cardStock" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="programTypeCode" type="xs:string" />
+          <xs:element xmlns:q9="http://ws.ips.mastercardworldwide.com/type/common/v1" minOccurs="0" maxOccurs="1" name="address" type="q9:AbstractAddressBaseType" />
+          <xs:element minOccurs="0" maxOccurs="1" name="accountNumber" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="mothersMaidenName" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="IdentificationType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="idType" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="identificationNumber" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="relationType" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="issueDate" type="xs:date" />
+      <xs:element minOccurs="0" maxOccurs="1" name="expiryDate" type="xs:date" />
+      <xs:element minOccurs="0" maxOccurs="1" name="placeOfIssue" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="issuingAuthority" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="additionalKycInformation" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="IdentificationDetailsType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="identificationType" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="identificationNumber" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="effectiveDate" type="xs:date" />
+      <xs:element minOccurs="1" maxOccurs="1" name="expirationDate" type="xs:date" />
+      <xs:element minOccurs="0" maxOccurs="1" name="issuer" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CreateCardHolderInfoType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="cardHolderName" type="tns:CardHolderNameV1R1Type" />
+      <xs:element minOccurs="0" maxOccurs="1" name="dateOfBirth" type="xs:date" />
+      <xs:element xmlns:q10="http://ws.ips.mastercardworldwide.com/type/common/v1" minOccurs="0" maxOccurs="1" name="phoneNumbers" type="q10:ArrayOfPhoneNumberWithDateRangeInfoType" />
+      <xs:element xmlns:q11="http://ws.ips.mastercardworldwide.com/type/geo/v1" minOccurs="0" maxOccurs="1" name="address" type="q11:PostalAddressV1R1Type" />
+      <xs:element minOccurs="0" maxOccurs="1" name="taxId" type="xs:string" />
+      <xs:element xmlns:q12="http://ws.ips.mastercardworldwide.com/type/person/v1" minOccurs="0" maxOccurs="1" name="gender" type="q12:GenderType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="employer" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

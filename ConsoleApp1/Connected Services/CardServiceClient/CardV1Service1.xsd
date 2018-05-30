@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://ws.ips.mastercardworldwide.com/type/security/v1" elementFormDefault="qualified" targetNamespace="http://ws.ips.mastercardworldwide.com/type/security/v1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="CsrAuthenticationStrengthType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="MEDIUM_STRENGTH_TWO_FACTOR" />
+      <xs:enumeration value="HIGH_STRENGTH_TWO_FACTOR" />
+      <xs:enumeration value="LAST_MILE_TWO_FACTOR" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CardHolderAuthenticationStrengthType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CARD_HOLDER_LIMITED" />
+      <xs:enumeration value="CARD_HOLDER_TWO_FACTOR" />
+      <xs:enumeration value="MEDIUM_STRENGTH_TWO_FACTOR" />
+      <xs:enumeration value="HIGH_STRENGTH_TWO_FACTOR" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

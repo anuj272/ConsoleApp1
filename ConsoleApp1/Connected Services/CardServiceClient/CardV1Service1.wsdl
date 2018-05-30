@@ -1,0 +1,2738 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://ws.ips.mastercardworldwide.com/message/card/v1" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="BasicHttpBinding_CardV1_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false" />
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:import namespace="http://ws.ips.mastercardworldwide.com/message/card/v1" location="https://g0qatools01/GDQATools/GDQA_IPSSimulator/GDQA_IPSSimulator_Card/CardV1Service.svc?wsdl" />
+  <wsdl:types />
+  <wsdl:binding name="BasicHttpBinding_CardV1" type="i0:CardV1">
+    <wsp:PolicyReference URI="#BasicHttpBinding_CardV1_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getEMVOfflineLimitsCH">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getEMVOfflineLimitsCHRequest">
+        <soap:header message="i0:getEMVOfflineLimitsCHRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getEMVOfflineLimitsCHOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="changeFeePackageV1R1">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="changeFeePackageV1R1Request">
+        <soap:header message="i0:changeFeePackageV1R1Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="changeFeePackageV1R1Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="setToLostCardV1R1">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="setToLostCardV1R1Request">
+        <soap:header message="i0:setToLostCardV1R1Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="setToLostCardV1R1Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="reissueCardV1R1">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="reissueCardV1R1Request">
+        <soap:header message="i0:reissueCardV1R1Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="reissueCardV1R1Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="reissueCardV1R2">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="reissueCardV1R2Request">
+        <soap:header message="i0:reissueCardV1R2Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="reissueCardV1R2Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="reissueCardV1R3">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="reissueCardV1R3Request">
+        <soap:header message="i0:reissueCardV1R3Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="reissueCardV1R3Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="reissueCardV1R4">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="reissueCardV1R4Request">
+        <soap:header message="i0:reissueCardV1R4Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="reissueCardV1R4Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="reissueCardV1R5">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="reissueCardV1R5Request">
+        <soap:header message="i0:reissueCardV1R5Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="reissueCardV1R5Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="loadReloadCardV1R5">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="loadReloadCardV1R5Request">
+        <soap:header message="i0:loadReloadCardV1R5Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="loadReloadCardV1R5Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getSystemEventsV1R1">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getSystemEventsV1R1Request">
+        <soap:header message="i0:getSystemEventsV1R1Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getSystemEventsV1R1Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="loadReloadCardV1R4">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="loadReloadCardV1R4Request">
+        <soap:header message="i0:loadReloadCardV1R4Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="loadReloadCardV1R4Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateNameAddressActivateCard">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="updateNameAddressActivateCardRequest">
+        <soap:header message="i0:updateNameAddressActivateCardRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="updateNameAddressActivateCardOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="loadReloadCardV1R6">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="loadReloadCardV1R6Request">
+        <soap:header message="i0:loadReloadCardV1R6Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="loadReloadCardV1R6Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="loadReloadCardV1R1">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="loadReloadCardV1R1Request">
+        <soap:header message="i0:loadReloadCardV1R1Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="loadReloadCardV1R1Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="loadReloadCardV1R3">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="loadReloadCardV1R3Request">
+        <soap:header message="i0:loadReloadCardV1R3Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="loadReloadCardV1R3Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="loadReloadCardV1R2">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="loadReloadCardV1R2Request">
+        <soap:header message="i0:loadReloadCardV1R2Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="loadReloadCardV1R2Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="reissueCard">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="reissueCardRequest">
+        <soap:header message="i0:reissueCardRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="reissueCardOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateAllPinsV1R1">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="updateAllPinsV1R1Request">
+        <soap:header message="i0:updateAllPinsV1R1Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="updateAllPinsV1R1Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="deleteQueuedScriptV1R1">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="deleteQueuedScriptV1R1Request">
+        <soap:header message="i0:deleteQueuedScriptV1R1Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="deleteQueuedScriptV1R1Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="loadReloadCard">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="loadReloadCardRequest">
+        <soap:header message="i0:loadReloadCardRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="loadReloadCardOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="activateOrSuspendToken">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="activateOrSuspendTokenRequest">
+        <soap:header message="i0:activateOrSuspendTokenRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="activateOrSuspendTokenOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="activateAnonymousCardV1R1">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="activateAnonymousCardV1R1Request">
+        <soap:header message="i0:activateAnonymousCardV1R1Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="activateAnonymousCardV1R1Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateCardDetailsV1R3">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="updateCardDetailsV1R3Request">
+        <soap:header message="i0:updateCardDetailsV1R3Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="updateCardDetailsV1R3Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateCardDetailsV1R2">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="updateCardDetailsV1R2Request">
+        <soap:header message="i0:updateCardDetailsV1R2Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="updateCardDetailsV1R2Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateAccountAddress">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="updateAccountAddressRequest">
+        <soap:header message="i0:updateAccountAddressRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="updateAccountAddressOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="replaceCard">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="replaceCardRequest">
+        <soap:header message="i0:replaceCardRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="replaceCardOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateCardDetailsV1R1">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="updateCardDetailsV1R1Request">
+        <soap:header message="i0:updateCardDetailsV1R1Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="updateCardDetailsV1R1Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCardListByCardNumber">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getCardListByCardNumberRequest">
+        <soap:header message="i0:getCardListByCardNumberRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getCardListByCardNumberOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="activateCardAndSelectPin">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="activateCardAndSelectPinRequest">
+        <soap:header message="i0:activateCardAndSelectPinRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="activateCardAndSelectPinOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="setPin">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="setPinRequest">
+        <soap:header message="i0:setPinRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="setPinOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="isCardReloadableV1R1">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="isCardReloadableV1R1Request">
+        <soap:header message="i0:isCardReloadableV1R1Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="isCardReloadableV1R1Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCardListByCardNumberV1R1">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getCardListByCardNumberV1R1Request">
+        <soap:header message="i0:getCardListByCardNumberV1R1Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getCardListByCardNumberV1R1Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getPinDetailsV1R1">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getPinDetailsV1R1Request">
+        <soap:header message="i0:getPinDetailsV1R1Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getPinDetailsV1R1Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updatePin">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="updatePinRequest">
+        <soap:header message="i0:updatePinRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="updatePinOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="reportLostStolenCardV1R7">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="reportLostStolenCardV1R7Request">
+        <soap:header message="i0:reportLostStolenCardV1R7Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="reportLostStolenCardV1R7Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="reportLostStolenCardV1R6">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="reportLostStolenCardV1R6Request">
+        <soap:header message="i0:reportLostStolenCardV1R6Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="reportLostStolenCardV1R6Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="reportLostStolenCardV1R5">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="reportLostStolenCardV1R5Request">
+        <soap:header message="i0:reportLostStolenCardV1R5Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="reportLostStolenCardV1R5Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="reportLostStolenCardV1R4">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="reportLostStolenCardV1R4Request">
+        <soap:header message="i0:reportLostStolenCardV1R4Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="reportLostStolenCardV1R4Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="activateCardV1R1">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="activateCardV1R1Request">
+        <soap:header message="i0:activateCardV1R1Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="activateCardV1R1Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="reportLostStolenCardV1R3">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="reportLostStolenCardV1R3Request">
+        <soap:header message="i0:reportLostStolenCardV1R3Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="reportLostStolenCardV1R3Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="reportLostStolenCardV1R2">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="reportLostStolenCardV1R2Request">
+        <soap:header message="i0:reportLostStolenCardV1R2Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="reportLostStolenCardV1R2Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getAlertPreferences">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getAlertPreferencesRequest">
+        <soap:header message="i0:getAlertPreferencesRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getAlertPreferencesOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="reportLostStolenCardV1R1">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="reportLostStolenCardV1R1Request">
+        <soap:header message="i0:reportLostStolenCardV1R1Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="reportLostStolenCardV1R1Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCardListByCardHolderIdAndRelatedAccountNumberV1R1">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getCardListByCardHolderIdAndRelatedAccountNumberV1R1Request">
+        <soap:header message="i0:getCardListByCardHolderIdAndRelatedAccountNumberV1R1Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getCardListByCardHolderIdAndRelatedAccountNumberV1R1Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCardListByCardHolderIdAndRelatedAccountNumberV1R2">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getCardListByCardHolderIdAndRelatedAccountNumberV1R2Request">
+        <soap:header message="i0:getCardListByCardHolderIdAndRelatedAccountNumberV1R2Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getCardListByCardHolderIdAndRelatedAccountNumberV1R2Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="inactivateCard">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="inactivateCardRequest">
+        <soap:header message="i0:inactivateCardRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="inactivateCardOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="activateCard">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="activateCardRequest">
+        <soap:header message="i0:activateCardRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="activateCardOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCHScriptQueue">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getCHScriptQueueRequest">
+        <soap:header message="i0:getCHScriptQueueRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getCHScriptQueueOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="validateCVC2AndGetCustomerType">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="validateCVC2AndGetCustomerTypeRequest">
+        <soap:header message="i0:validateCVC2AndGetCustomerTypeRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="validateCVC2AndGetCustomerTypeOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="isCardReloadable">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="isCardReloadableRequest">
+        <soap:header message="i0:isCardReloadableRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="isCardReloadableOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCardDetails">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getCardDetailsRequest">
+        <soap:header message="i0:getCardDetailsRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getCardDetailsOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="setToStolenCard">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="setToStolenCardRequest">
+        <soap:header message="i0:setToStolenCardRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="setToStolenCardOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getFeePackage">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getFeePackageRequest">
+        <soap:header message="i0:getFeePackageRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getFeePackageOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCardsByProxyNumber">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getCardsByProxyNumberRequest">
+        <soap:header message="i0:getCardsByProxyNumberRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getCardsByProxyNumberOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="activateCardWithValidationV1R1">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="activateCardWithValidationV1R1Request">
+        <soap:header message="i0:activateCardWithValidationV1R1Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="activateCardWithValidationV1R1Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="linkCardAndLoadValueV1R2">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="linkCardAndLoadValueV1R2Request">
+        <soap:header message="i0:linkCardAndLoadValueV1R2Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="linkCardAndLoadValueV1R2Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="linkCardAndLoadValueV1R1">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="linkCardAndLoadValueV1R1Request">
+        <soap:header message="i0:linkCardAndLoadValueV1R1Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="linkCardAndLoadValueV1R1Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="linkCardAndLoadValueV1R3">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="linkCardAndLoadValueV1R3Request">
+        <soap:header message="i0:linkCardAndLoadValueV1R3Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="linkCardAndLoadValueV1R3Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="replaceCardWithEmbossNameAndAddress">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="replaceCardWithEmbossNameAndAddressRequest">
+        <soap:header message="i0:replaceCardWithEmbossNameAndAddressRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="replaceCardWithEmbossNameAndAddressOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCardListByRelatedAccountNumber">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getCardListByRelatedAccountNumberRequest">
+        <soap:header message="i0:getCardListByRelatedAccountNumberRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getCardListByRelatedAccountNumberOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="addEvent">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="addEventRequest">
+        <soap:header message="i0:addEventRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="addEventOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateCardEmbossName">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="updateCardEmbossNameRequest">
+        <soap:header message="i0:updateCardEmbossNameRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="updateCardEmbossNameOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="pinValidation">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="pinValidationRequest">
+        <soap:header message="i0:pinValidationRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="pinValidationOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="addEventV1R1">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="addEventV1R1Request">
+        <soap:header message="i0:addEventV1R1Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="addEventV1R1Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCardTokens">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getCardTokensRequest">
+        <soap:header message="i0:getCardTokensRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getCardTokensOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getEMVCurrencyRiskFactorsPAN">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getEMVCurrencyRiskFactorsPANRequest">
+        <soap:header message="i0:getEMVCurrencyRiskFactorsPANRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getEMVCurrencyRiskFactorsPANOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCardListByCardHolderId">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getCardListByCardHolderIdRequest">
+        <soap:header message="i0:getCardListByCardHolderIdRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getCardListByCardHolderIdOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="validateCVC2">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="validateCVC2Request">
+        <soap:header message="i0:validateCVC2Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="validateCVC2Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateCardPin">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="updateCardPinRequest">
+        <soap:header message="i0:updateCardPinRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="updateCardPinOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="maintainAccountUpdater">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="maintainAccountUpdaterRequest">
+        <soap:header message="i0:maintainAccountUpdaterRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="maintainAccountUpdaterOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="maintainRecurringPaymentCancellation">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="maintainRecurringPaymentCancellationRequest">
+        <soap:header message="i0:maintainRecurringPaymentCancellationRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="maintainRecurringPaymentCancellationOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="resetRejectedTransactionCount">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="resetRejectedTransactionCountRequest">
+        <soap:header message="i0:resetRejectedTransactionCountRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="resetRejectedTransactionCountOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getSystemEvents">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getSystemEventsRequest">
+        <soap:header message="i0:getSystemEventsRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getSystemEventsOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCardListByCardHolderIdAndRelatedAccountNumber">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getCardListByCardHolderIdAndRelatedAccountNumberRequest">
+        <soap:header message="i0:getCardListByCardHolderIdAndRelatedAccountNumberRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getCardListByCardHolderIdAndRelatedAccountNumberOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createCardHolderCardAccount">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="createCardHolderCardAccountRequest">
+        <soap:header message="i0:createCardHolderCardAccountRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="createCardHolderCardAccountOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCHSentScriptsV1R1">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getCHSentScriptsV1R1Request">
+        <soap:header message="i0:getCHSentScriptsV1R1Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getCHSentScriptsV1R1Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="closeCardV1R1">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="closeCardV1R1Request">
+        <soap:header message="i0:closeCardV1R1Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="closeCardV1R1Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="setToLostCard">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="setToLostCardRequest">
+        <soap:header message="i0:setToLostCardRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="setToLostCardOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="inactivateCardV1R1">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="inactivateCardV1R1Request">
+        <soap:header message="i0:inactivateCardV1R1Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="inactivateCardV1R1Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="activatePrepaidCardWithCVC2Validation">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="activatePrepaidCardWithCVC2ValidationRequest">
+        <soap:header message="i0:activatePrepaidCardWithCVC2ValidationRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="activatePrepaidCardWithCVC2ValidationOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getPinDetails">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getPinDetailsRequest">
+        <soap:header message="i0:getPinDetailsRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getPinDetailsOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="modifyEMVOfflineLimitsCH">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="modifyEMVOfflineLimitsCHRequest">
+        <soap:header message="i0:modifyEMVOfflineLimitsCHRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="modifyEMVOfflineLimitsCHOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="replaceCardV1R7">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="replaceCardV1R7Request">
+        <soap:header message="i0:replaceCardV1R7Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="replaceCardV1R7Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="changeAuthTreatments">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="changeAuthTreatmentsRequest">
+        <soap:header message="i0:changeAuthTreatmentsRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="changeAuthTreatmentsOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="replaceCardV1R5">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="replaceCardV1R5Request">
+        <soap:header message="i0:replaceCardV1R5Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="replaceCardV1R5Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="unloadCashoutCardWithPinValidationV1R1">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="unloadCashoutCardWithPinValidationV1R1Request">
+        <soap:header message="i0:unloadCashoutCardWithPinValidationV1R1Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="unloadCashoutCardWithPinValidationV1R1Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="replaceCardV1R6">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="replaceCardV1R6Request">
+        <soap:header message="i0:replaceCardV1R6Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="replaceCardV1R6Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="replaceCardV1R3">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="replaceCardV1R3Request">
+        <soap:header message="i0:replaceCardV1R3Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="replaceCardV1R3Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="replaceCardV1R4">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="replaceCardV1R4Request">
+        <soap:header message="i0:replaceCardV1R4Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="replaceCardV1R4Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="setToActiveCard">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="setToActiveCardRequest">
+        <soap:header message="i0:setToActiveCardRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="setToActiveCardOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCardDetailsV1R7">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getCardDetailsV1R7Request">
+        <soap:header message="i0:getCardDetailsV1R7Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getCardDetailsV1R7Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCardDetailsV1R8">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getCardDetailsV1R8Request">
+        <soap:header message="i0:getCardDetailsV1R8Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getCardDetailsV1R8Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCardDetailsV1R9">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getCardDetailsV1R9Request">
+        <soap:header message="i0:getCardDetailsV1R9Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getCardDetailsV1R9Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCardDetailsV1R3">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getCardDetailsV1R3Request">
+        <soap:header message="i0:getCardDetailsV1R3Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getCardDetailsV1R3Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCardDetailsV1R4">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getCardDetailsV1R4Request">
+        <soap:header message="i0:getCardDetailsV1R4Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getCardDetailsV1R4Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCardDetailsV1R5">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getCardDetailsV1R5Request">
+        <soap:header message="i0:getCardDetailsV1R5Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getCardDetailsV1R5Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCardDetailsV1R6">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getCardDetailsV1R6Request">
+        <soap:header message="i0:getCardDetailsV1R6Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getCardDetailsV1R6Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="replaceCardWithEmbossNameAndAddressV1R2">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="replaceCardWithEmbossNameAndAddressV1R2Request">
+        <soap:header message="i0:replaceCardWithEmbossNameAndAddressV1R2Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="replaceCardWithEmbossNameAndAddressV1R2Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="replaceCardWithEmbossNameAndAddressV1R3">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="replaceCardWithEmbossNameAndAddressV1R3Request">
+        <soap:header message="i0:replaceCardWithEmbossNameAndAddressV1R3Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="replaceCardWithEmbossNameAndAddressV1R3Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCardDetailsV1R1">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getCardDetailsV1R1Request">
+        <soap:header message="i0:getCardDetailsV1R1Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getCardDetailsV1R1Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="replaceCardWithEmbossNameAndAddressV1R1">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="replaceCardWithEmbossNameAndAddressV1R1Request">
+        <soap:header message="i0:replaceCardWithEmbossNameAndAddressV1R1Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="replaceCardWithEmbossNameAndAddressV1R1Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCardDetailsV1R2">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getCardDetailsV1R2Request">
+        <soap:header message="i0:getCardDetailsV1R2Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getCardDetailsV1R2Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="replaceCardAndUpdateCardHolderDetailsV1R1">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="replaceCardAndUpdateCardHolderDetailsV1R1Request">
+        <soap:header message="i0:replaceCardAndUpdateCardHolderDetailsV1R1Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="replaceCardAndUpdateCardHolderDetailsV1R1Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="resetPinTries">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="resetPinTriesRequest">
+        <soap:header message="i0:resetPinTriesRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="resetPinTriesOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="replaceCardAndUpdateCardHolderDetailsV1R2">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="replaceCardAndUpdateCardHolderDetailsV1R2Request">
+        <soap:header message="i0:replaceCardAndUpdateCardHolderDetailsV1R2Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="replaceCardAndUpdateCardHolderDetailsV1R2Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getACHDetailsV1R1">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getACHDetailsV1R1Request">
+        <soap:header message="i0:getACHDetailsV1R1Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getACHDetailsV1R1Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="replaceCardWithEmbossNameAndAddressV1R4">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="replaceCardWithEmbossNameAndAddressV1R4Request">
+        <soap:header message="i0:replaceCardWithEmbossNameAndAddressV1R4Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="replaceCardWithEmbossNameAndAddressV1R4Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCardDetailsV1R10">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getCardDetailsV1R10Request">
+        <soap:header message="i0:getCardDetailsV1R10Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getCardDetailsV1R10Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="unloadCashoutCardV1R1">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="unloadCashoutCardV1R1Request">
+        <soap:header message="i0:unloadCashoutCardV1R1Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="unloadCashoutCardV1R1Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCardDetailsV1R11">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getCardDetailsV1R11Request">
+        <soap:header message="i0:getCardDetailsV1R11Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getCardDetailsV1R11Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="unloadCashoutCardV1R2">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="unloadCashoutCardV1R2Request">
+        <soap:header message="i0:unloadCashoutCardV1R2Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="unloadCashoutCardV1R2Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="setAlertPreferencesV1R1">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="setAlertPreferencesV1R1Request">
+        <soap:header message="i0:setAlertPreferencesV1R1Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="setAlertPreferencesV1R1Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="changeCardStatus">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="changeCardStatusRequest">
+        <soap:header message="i0:changeCardStatusRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="changeCardStatusOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="holdCard">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="holdCardRequest">
+        <soap:header message="i0:holdCardRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="holdCardOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="verifyPin">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="verifyPinRequest">
+        <soap:header message="i0:verifyPinRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="verifyPinOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createCardHolderDebitCardAccountWithTemporaryAddressV1R1">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="createCardHolderDebitCardAccountWithTemporaryAddressV1R1Request">
+        <soap:header message="i0:createCardHolderDebitCardAccountWithTemporaryAddressV1R1Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="createCardHolderDebitCardAccountWithTemporaryAddressV1R1Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createCardHolderDebitCardAccountWithTemporaryAddressV1R2">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="createCardHolderDebitCardAccountWithTemporaryAddressV1R2Request">
+        <soap:header message="i0:createCardHolderDebitCardAccountWithTemporaryAddressV1R2Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="createCardHolderDebitCardAccountWithTemporaryAddressV1R2Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createCardHolderDebitCardAccountWithTemporaryAddressV1R3">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="createCardHolderDebitCardAccountWithTemporaryAddressV1R3Request">
+        <soap:header message="i0:createCardHolderDebitCardAccountWithTemporaryAddressV1R3Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="createCardHolderDebitCardAccountWithTemporaryAddressV1R3Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createCardHolderDebitCardAccountWithTemporaryAddressV1R4">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="createCardHolderDebitCardAccountWithTemporaryAddressV1R4Request">
+        <soap:header message="i0:createCardHolderDebitCardAccountWithTemporaryAddressV1R4Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="createCardHolderDebitCardAccountWithTemporaryAddressV1R4Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="setToStolenCardV1R1">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="setToStolenCardV1R1Request">
+        <soap:header message="i0:setToStolenCardV1R1Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="setToStolenCardV1R1Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="unloadCashoutCardV1R3">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="unloadCashoutCardV1R3Request">
+        <soap:header message="i0:unloadCashoutCardV1R3Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="unloadCashoutCardV1R3Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateCardEmbossNameV1R1">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="updateCardEmbossNameV1R1Request">
+        <soap:header message="i0:updateCardEmbossNameV1R1Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="updateCardEmbossNameV1R1Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="replaceCardV1R2">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="replaceCardV1R2Request">
+        <soap:header message="i0:replaceCardV1R2Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="replaceCardV1R2Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="replaceCardV1R1">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="replaceCardV1R1Request">
+        <soap:header message="i0:replaceCardV1R1Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="replaceCardV1R1Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createCardHolderDebitCardAccountWithTemporaryAddressV1R6">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="createCardHolderDebitCardAccountWithTemporaryAddressV1R6Request">
+        <soap:header message="i0:createCardHolderDebitCardAccountWithTemporaryAddressV1R6Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="createCardHolderDebitCardAccountWithTemporaryAddressV1R6Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createCardHolderDebitCardAccountWithTemporaryAddressV1R5">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="createCardHolderDebitCardAccountWithTemporaryAddressV1R5Request">
+        <soap:header message="i0:createCardHolderDebitCardAccountWithTemporaryAddressV1R5Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="createCardHolderDebitCardAccountWithTemporaryAddressV1R5Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateCardDetails">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="updateCardDetailsRequest">
+        <soap:header message="i0:updateCardDetailsRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="updateCardDetailsOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createCardHolderCardAccountV1R10">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="createCardHolderCardAccountV1R10Request">
+        <soap:header message="i0:createCardHolderCardAccountV1R10Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="createCardHolderCardAccountV1R10Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="linkCardAndLoadValue">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="linkCardAndLoadValueRequest">
+        <soap:header message="i0:linkCardAndLoadValueRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="linkCardAndLoadValueOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getAlertPreferencesV1R1">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getAlertPreferencesV1R1Request">
+        <soap:header message="i0:getAlertPreferencesV1R1Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getAlertPreferencesV1R1Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="changeCardStatusV1R1">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="changeCardStatusV1R1Request">
+        <soap:header message="i0:changeCardStatusV1R1Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="changeCardStatusV1R1Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="addCard">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="addCardRequest">
+        <soap:header message="i0:addCardRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="addCardOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="changeCardStatusV1R2">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="changeCardStatusV1R2Request">
+        <soap:header message="i0:changeCardStatusV1R2Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="changeCardStatusV1R2Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="findPrimaryCardV1R1">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="findPrimaryCardV1R1Request">
+        <soap:header message="i0:findPrimaryCardV1R1Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="findPrimaryCardV1R1Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getAuthTreatments">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getAuthTreatmentsRequest">
+        <soap:header message="i0:getAuthTreatmentsRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getAuthTreatmentsOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCardOrderDetails">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getCardOrderDetailsRequest">
+        <soap:header message="i0:getCardOrderDetailsRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getCardOrderDetailsOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCHScriptQueueV1R1">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getCHScriptQueueV1R1Request">
+        <soap:header message="i0:getCHScriptQueueV1R1Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getCHScriptQueueV1R1Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCardSummary">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getCardSummaryRequest">
+        <soap:header message="i0:getCardSummaryRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getCardSummaryOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateAllPins">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="updateAllPinsRequest">
+        <soap:header message="i0:updateAllPinsRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="updateAllPinsOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="changeCardStockV1R1">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="changeCardStockV1R1Request">
+        <soap:header message="i0:changeCardStockV1R1Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="changeCardStockV1R1Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="changeProgramTypeV1R1">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="changeProgramTypeV1R1Request">
+        <soap:header message="i0:changeProgramTypeV1R1Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="changeProgramTypeV1R1Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="validateCVC2V1R1">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="validateCVC2V1R1Request">
+        <soap:header message="i0:validateCVC2V1R1Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="validateCVC2V1R1Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="maintainSharedPan">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="maintainSharedPanRequest">
+        <soap:header message="i0:maintainSharedPanRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="maintainSharedPanOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="changeProgramType">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="changeProgramTypeRequest">
+        <soap:header message="i0:changeProgramTypeRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="changeProgramTypeOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="replaceCardAndUpdateCardHolderDetails">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="replaceCardAndUpdateCardHolderDetailsRequest">
+        <soap:header message="i0:replaceCardAndUpdateCardHolderDetailsRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="replaceCardAndUpdateCardHolderDetailsOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createCardHolderCardAccountV1R8">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="createCardHolderCardAccountV1R8Request">
+        <soap:header message="i0:createCardHolderCardAccountV1R8Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="createCardHolderCardAccountV1R8Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createCardHolderCardAccountV1R9">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="createCardHolderCardAccountV1R9Request">
+        <soap:header message="i0:createCardHolderCardAccountV1R9Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="createCardHolderCardAccountV1R9Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="activateAnonymousCard">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="activateAnonymousCardRequest">
+        <soap:header message="i0:activateAnonymousCardRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="activateAnonymousCardOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createCardHolderCardAccountV1R6">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="createCardHolderCardAccountV1R6Request">
+        <soap:header message="i0:createCardHolderCardAccountV1R6Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="createCardHolderCardAccountV1R6Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createCardHolderCardAccountV1R7">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="createCardHolderCardAccountV1R7Request">
+        <soap:header message="i0:createCardHolderCardAccountV1R7Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="createCardHolderCardAccountV1R7Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createCardHolderCardAccountV1R4">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="createCardHolderCardAccountV1R4Request">
+        <soap:header message="i0:createCardHolderCardAccountV1R4Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="createCardHolderCardAccountV1R4Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createCardHolderCardAccountV1R5">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="createCardHolderCardAccountV1R5Request">
+        <soap:header message="i0:createCardHolderCardAccountV1R5Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="createCardHolderCardAccountV1R5Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createCardHolderCardAccountV1R2">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="createCardHolderCardAccountV1R2Request">
+        <soap:header message="i0:createCardHolderCardAccountV1R2Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="createCardHolderCardAccountV1R2Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createCardHolderCardAccountV1R3">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="createCardHolderCardAccountV1R3Request">
+        <soap:header message="i0:createCardHolderCardAccountV1R3Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="createCardHolderCardAccountV1R3Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="holdCardV1R1">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="holdCardV1R1Request">
+        <soap:header message="i0:holdCardV1R1Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="holdCardV1R1Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updatePinV1R1">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="updatePinV1R1Request">
+        <soap:header message="i0:updatePinV1R1Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="updatePinV1R1Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateCardManualPurgeIndicator">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="updateCardManualPurgeIndicatorRequest">
+        <soap:header message="i0:updateCardManualPurgeIndicatorRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="updateCardManualPurgeIndicatorOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="unloadCashoutCardWithPinValidation">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="unloadCashoutCardWithPinValidationRequest">
+        <soap:header message="i0:unloadCashoutCardWithPinValidationRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="unloadCashoutCardWithPinValidationOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="setToPotentialFraudCardV1R1">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="setToPotentialFraudCardV1R1Request">
+        <soap:header message="i0:setToPotentialFraudCardV1R1Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="setToPotentialFraudCardV1R1Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="deleteCardSpendingLimits">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="deleteCardSpendingLimitsRequest">
+        <soap:header message="i0:deleteCardSpendingLimitsRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="deleteCardSpendingLimitsOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="activateOrSuspendTokenV1R1">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="activateOrSuspendTokenV1R1Request">
+        <soap:header message="i0:activateOrSuspendTokenV1R1Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="activateOrSuspendTokenV1R1Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="changeLimitPackage">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="changeLimitPackageRequest">
+        <soap:header message="i0:changeLimitPackageRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="changeLimitPackageOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateEmbossIdentifier">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="updateEmbossIdentifierRequest">
+        <soap:header message="i0:updateEmbossIdentifierRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="updateEmbossIdentifierOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCardOrderDetailsV1R2">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getCardOrderDetailsV1R2Request">
+        <soap:header message="i0:getCardOrderDetailsV1R2Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getCardOrderDetailsV1R2Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCardOrderDetailsV1R1">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getCardOrderDetailsV1R1Request">
+        <soap:header message="i0:getCardOrderDetailsV1R1Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getCardOrderDetailsV1R1Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getACHDetails">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getACHDetailsRequest">
+        <soap:header message="i0:getACHDetailsRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getACHDetailsOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="selectPinAtSetup">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="selectPinAtSetupRequest">
+        <soap:header message="i0:selectPinAtSetupRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="selectPinAtSetupOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="changeCardStock">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="changeCardStockRequest">
+        <soap:header message="i0:changeCardStockRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="changeCardStockOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="setToFraudCard">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="setToFraudCardRequest">
+        <soap:header message="i0:setToFraudCardRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="setToFraudCardOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCardDetailsUsingCardProxy">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getCardDetailsUsingCardProxyRequest">
+        <soap:header message="i0:getCardDetailsUsingCardProxyRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getCardDetailsUsingCardProxyOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="changeCardSpendingLimits">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="changeCardSpendingLimitsRequest">
+        <soap:header message="i0:changeCardSpendingLimitsRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="changeCardSpendingLimitsOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCardListByCardHolderIdV1R1">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getCardListByCardHolderIdV1R1Request">
+        <soap:header message="i0:getCardListByCardHolderIdV1R1Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getCardListByCardHolderIdV1R1Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCardListByCardHolderIdV1R2">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getCardListByCardHolderIdV1R2Request">
+        <soap:header message="i0:getCardListByCardHolderIdV1R2Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getCardListByCardHolderIdV1R2Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCardDetailsUsingCardProxyV1R2">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getCardDetailsUsingCardProxyV1R2Request">
+        <soap:header message="i0:getCardDetailsUsingCardProxyV1R2Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getCardDetailsUsingCardProxyV1R2Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCardDetailsUsingCardProxyV1R1">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getCardDetailsUsingCardProxyV1R1Request">
+        <soap:header message="i0:getCardDetailsUsingCardProxyV1R1Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getCardDetailsUsingCardProxyV1R1Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="findPrimaryCard">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="findPrimaryCardRequest">
+        <soap:header message="i0:findPrimaryCardRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="findPrimaryCardOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCardStateV1R1">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getCardStateV1R1Request">
+        <soap:header message="i0:getCardStateV1R1Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getCardStateV1R1Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCardState">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getCardStateRequest">
+        <soap:header message="i0:getCardStateRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getCardStateOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="setToFraudCardV1R1">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="setToFraudCardV1R1Request">
+        <soap:header message="i0:setToFraudCardV1R1Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="setToFraudCardV1R1Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="changePlasticType">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="changePlasticTypeRequest">
+        <soap:header message="i0:changePlasticTypeRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="changePlasticTypeOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="closeCard">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="closeCardRequest">
+        <soap:header message="i0:closeCardRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="closeCardOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="unloadCashoutCard">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="unloadCashoutCardRequest">
+        <soap:header message="i0:unloadCashoutCardRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="unloadCashoutCardOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="setAlertPreferences">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="setAlertPreferencesRequest">
+        <soap:header message="i0:setAlertPreferencesRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="setAlertPreferencesOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCVC2">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getCVC2Request">
+        <soap:header message="i0:getCVC2Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getCVC2Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="setToPotentialFraudCard">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="setToPotentialFraudCardRequest">
+        <soap:header message="i0:setToPotentialFraudCardRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="setToPotentialFraudCardOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCardSummaryV1R4">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getCardSummaryV1R4Request">
+        <soap:header message="i0:getCardSummaryV1R4Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getCardSummaryV1R4Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCardSummaryV1R3">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getCardSummaryV1R3Request">
+        <soap:header message="i0:getCardSummaryV1R3Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getCardSummaryV1R3Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCardSummaryV1R2">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getCardSummaryV1R2Request">
+        <soap:header message="i0:getCardSummaryV1R2Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getCardSummaryV1R2Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCardSummaryV1R1">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getCardSummaryV1R1Request">
+        <soap:header message="i0:getCardSummaryV1R1Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getCardSummaryV1R1Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="linkPreIssuedDebitCardToCardHolder">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="linkPreIssuedDebitCardToCardHolderRequest">
+        <soap:header message="i0:linkPreIssuedDebitCardToCardHolderRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="linkPreIssuedDebitCardToCardHolderOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="maintainBillingUpdaterStatus">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="maintainBillingUpdaterStatusRequest">
+        <soap:header message="i0:maintainBillingUpdaterStatusRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="maintainBillingUpdaterStatusOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="reportLostStolenCard">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="reportLostStolenCardRequest">
+        <soap:header message="i0:reportLostStolenCardRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="reportLostStolenCardOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="setToActiveCardV1R1">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="setToActiveCardV1R1Request">
+        <soap:header message="i0:setToActiveCardV1R1Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="setToActiveCardV1R1Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="addCardV1R1">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="addCardV1R1Request">
+        <soap:header message="i0:addCardV1R1Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="addCardV1R1Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCardListByRelatedAccountNumberV1R1">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getCardListByRelatedAccountNumberV1R1Request">
+        <soap:header message="i0:getCardListByRelatedAccountNumberV1R1Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getCardListByRelatedAccountNumberV1R1Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCardListByRelatedAccountNumberV1R2">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getCardListByRelatedAccountNumberV1R2Request">
+        <soap:header message="i0:getCardListByRelatedAccountNumberV1R2Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getCardListByRelatedAccountNumberV1R2Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCHSentScripts">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getCHSentScriptsRequest">
+        <soap:header message="i0:getCHSentScriptsRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getCHSentScriptsOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="addCardV1R4">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="addCardV1R4Request">
+        <soap:header message="i0:addCardV1R4Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="addCardV1R4Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="addCardV1R3">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="addCardV1R3Request">
+        <soap:header message="i0:addCardV1R3Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="addCardV1R3Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="addCardV1R2">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="addCardV1R2Request">
+        <soap:header message="i0:addCardV1R2Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="addCardV1R2Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="changeFeePackage">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="changeFeePackageRequest">
+        <soap:header message="i0:changeFeePackageRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="changeFeePackageOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createCardHolderAccountAndLinkPreIssuedDebitCard">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="createCardHolderAccountAndLinkPreIssuedDebitCardRequest">
+        <soap:header message="i0:createCardHolderAccountAndLinkPreIssuedDebitCardRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="createCardHolderAccountAndLinkPreIssuedDebitCardOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createCardHolderDebitCardAccountWithTemporaryAddress">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="createCardHolderDebitCardAccountWithTemporaryAddressRequest">
+        <soap:header message="i0:createCardHolderDebitCardAccountWithTemporaryAddressRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="createCardHolderDebitCardAccountWithTemporaryAddressOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCVC2V1R1">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getCVC2V1R1Request">
+        <soap:header message="i0:getCVC2V1R1Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getCVC2V1R1Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="activateCardWithValidation">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="activateCardWithValidationRequest">
+        <soap:header message="i0:activateCardWithValidationRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="activateCardWithValidationOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCardSpendingLimitsDetails">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getCardSpendingLimitsDetailsRequest">
+        <soap:header message="i0:getCardSpendingLimitsDetailsRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getCardSpendingLimitsDetailsOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="deleteQueuedScript">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="deleteQueuedScriptRequest">
+        <soap:header message="i0:deleteQueuedScriptRequest_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="deleteQueuedScriptOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="pinValidationV1R1">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="pinValidationV1R1Request">
+        <soap:header message="i0:pinValidationV1R1Request_Headers" part="simpleSecurityAssertion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="pinValidationV1R1Output">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ipsException">
+        <soap:fault use="literal" name="ipsException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+</wsdl:definitions>

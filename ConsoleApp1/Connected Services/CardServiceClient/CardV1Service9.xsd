@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://ws.ips.mastercardworldwide.com/type/account/v1" elementFormDefault="qualified" targetNamespace="http://ws.ips.mastercardworldwide.com/type/account/v1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://g0qatools01/GDQATools/GDQA_IPSSimulator/GDQA_IPSSimulator_Card/CardV1Service.svc?xsd=xsd3" namespace="http://ws.ips.mastercardworldwide.com/type/common/v1" />
+  <xs:import schemaLocation="https://g0qatools01/GDQATools/GDQA_IPSSimulator/GDQA_IPSSimulator_Card/CardV1Service.svc?xsd=xsd9" namespace="http://ws.ips.mastercardworldwide.com/type/currency/v1" />
+  <xs:complexType name="AccountAddressType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://ws.ips.mastercardworldwide.com/type/common/v1" base="q1:AbstractAddressBaseType" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="accountNumber" type="xs:string" />
+  <xs:complexType name="ArrayOfAccountAddressType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="accountAddress" type="tns:AccountAddressType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AdjustAccountBalanaceType">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://ws.ips.mastercardworldwide.com/type/currency/v1" minOccurs="0" maxOccurs="1" name="adjustmentAmount" type="q2:NonNegativeAmountWithCurrencyType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="transactionCode" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="transactionReferenceNumber" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="transactionReasonCode" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="transactionDescription" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="transactionComment" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

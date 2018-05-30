@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://ws.ips.mastercardworldwide.com/type/common/v1" elementFormDefault="qualified" targetNamespace="http://ws.ips.mastercardworldwide.com/type/common/v1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://g0qatools01/GDQATools/GDQA_IPSSimulator/GDQA_IPSSimulator_Card/CardV1Service.svc?xsd=xsd4" namespace="http://ws.ips.mastercardworldwide.com/type/geo/v1" />
+  <xs:complexType name="AbstractAddressBaseType" abstract="true">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://ws.ips.mastercardworldwide.com/type/geo/v1" minOccurs="0" maxOccurs="1" name="postalAddress" type="q1:PostalAddressWithDateRangeType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="addressKeyType" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="temporaryAddress" type="xs:boolean" />
+    </xs:sequence>
+    <xs:attribute name="useTypeCode" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="ArrayOfPhoneNumberWithDateRangeInfoType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="phoneNumberWithDateRangeInfo" type="tns:PhoneNumberWithDateRangeInfoType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PhoneNumberWithDateRangeInfoType">
+    <xs:simpleContent>
+      <xs:extension base="tns:PhoneNumberInfoType">
+        <xs:attribute name="startDate" type="xs:date" />
+        <xs:attribute name="endDate" type="xs:date" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="PhoneNumberInfoType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="typeCode" type="xs:string" />
+        <xs:attribute name="phoneKey" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="ShippingInfoType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="trackingNumber" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="shippingDate" type="xs:date" />
+      <xs:element minOccurs="0" maxOccurs="1" name="shippingVia" type="xs:string" />
+      <xs:element xmlns:q2="http://ws.ips.mastercardworldwide.com/type/geo/v1" minOccurs="0" maxOccurs="1" name="shippingAddress" type="q2:PostalAddressType" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

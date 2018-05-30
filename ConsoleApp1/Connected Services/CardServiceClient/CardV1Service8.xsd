@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://ws.ips.mastercardworldwide.com/type/card/v1" elementFormDefault="qualified" targetNamespace="http://ws.ips.mastercardworldwide.com/type/card/v1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://g0qatools01/GDQATools/GDQA_IPSSimulator/GDQA_IPSSimulator_Card/CardV1Service.svc?xsd=xsd9" namespace="http://ws.ips.mastercardworldwide.com/type/currency/v1" />
+  <xs:complexType name="CardInfoType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="cardNumber" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="previousCardNumber" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="plasticIssueReasonCode" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="previousCardExpirationDate" type="xs:date" />
+      <xs:element minOccurs="0" maxOccurs="1" name="cardStatusCode" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="cardReasonCode" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="cardHistory" type="tns:CardHistoryType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="cardScheduled" type="tns:CardScheduledType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="cardEmbossing" type="tns:CardEmbossingType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="activationInfo" type="tns:ActivationInfoType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="pinFailureCount" type="xs:unsignedShort" />
+      <xs:element minOccurs="1" maxOccurs="1" name="rejectedTransactionCount" type="xs:unsignedShort" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CardHistoryType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="initialIssueDate" type="xs:date" />
+      <xs:element minOccurs="0" maxOccurs="1" name="firstUseDate" type="xs:date" />
+      <xs:element minOccurs="0" maxOccurs="1" name="lastEdited" type="xs:date" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CardScheduledType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="cardExpirationDate" type="xs:date" />
+      <xs:element minOccurs="0" maxOccurs="1" name="cardIssueDate" type="xs:date" />
+      <xs:element minOccurs="0" maxOccurs="1" name="nextReissueDate" type="xs:date" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CardEmbossingType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="embossedName" type="tns:ArrayOfString1" />
+      <xs:element minOccurs="0" maxOccurs="1" name="embossedDate" type="xs:date" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfString1">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="embossedNameLine" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ActivationInfoType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="activationDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" maxOccurs="1" name="activationChannelCode" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="cardActivationIndicator" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfRelatedAccountType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="relatedAccount" type="tns:RelatedAccountType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RelatedAccountType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="relatedAccountNumber" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="relatedAccountTypeCode" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="relatedAccountProductCode" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CardInfoV1R1Type">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="cardNumber" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="previousCardNumber" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="plasticIssueReasonCode" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="previousCardExpirationDate" type="xs:date" />
+      <xs:element minOccurs="0" maxOccurs="1" name="cardStatusCode" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="cardReasonCode" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="cardHistory" type="tns:CardHistoryType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="cardScheduled" type="tns:CardScheduledType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="cardEmbossing" type="tns:CardEmbossingType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="activationInfo" type="tns:ActivationInfoType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="pinFailureCount" type="xs:unsignedShort" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CardInfoV1R2Type">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="cardNumber" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="previousCardNumber" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="plasticIssueReasonCode" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="previousCardExpirationDate" type="xs:date" />
+      <xs:element minOccurs="0" maxOccurs="1" name="cardStatusCode" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="cardReasonCode" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="cardHistory" type="tns:CardHistoryType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="cardScheduled" type="tns:CardScheduledType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="cardEmbossing" type="tns:CardEmbossingType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="activationInfo" type="tns:ActivationInfoType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="pinFailureCount" type="xs:unsignedShort" />
+      <xs:element minOccurs="0" maxOccurs="1" name="compromisedCardIndicator" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="1" name="pictureReferenceId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AbstractCardListType" abstract="true" />
+  <xs:complexType name="PrepaidCardListType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:AbstractCardListType">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="card" type="tns:PrepaidCardType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="PrepaidCardType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:AbstractCardBaseType" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="AbstractCardBaseType" abstract="true">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="cardNumber" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="cardStatusCode" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="cardStatusDate" type="xs:date" />
+      <xs:element minOccurs="1" maxOccurs="1" name="cardActivationIndicator" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="1" name="cardStock" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DebitCardType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:AbstractCardBaseType">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="relatedAccountList" type="tns:ArrayOfRelatedAccountType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="DebitCardV1R1Type">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:AbstractCardBaseType">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="compromisedCardIndicator" type="xs:boolean" />
+          <xs:element minOccurs="0" maxOccurs="1" name="previousCardExpirationDate" type="xs:date" />
+          <xs:element minOccurs="0" maxOccurs="1" name="currentExpirationDate" type="xs:date" />
+          <xs:element minOccurs="0" maxOccurs="1" name="lastIssueDate" type="xs:date" />
+          <xs:element minOccurs="0" maxOccurs="1" name="plasticIssueReason" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="DebitCardListType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:AbstractCardListType">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="card" type="tns:DebitCardType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="DebitCardListV1R1Type">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:AbstractCardListType">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="card" type="tns:DebitCardV1R1Type" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfString3">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="cardNumber" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfLimitDetailInfoType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="limitDetailInfo" type="tns:LimitDetailInfoType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LimitDetailInfoType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="cardLimit" type="tns:CardLimitType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="usedLimitValue" type="tns:AbstractLimitValueBaseType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="RemainingLimitValue" type="tns:AbstractLimitValueBaseType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="limitFrequencyInfo" type="tns:LimitFrequencyInfoType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CardLimitType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="limitName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="limitKey" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="permanentLimitValue" type="tns:AbstractLimitValueBaseType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="limitOverride" type="tns:AbstractCardLimitOverrideBaseType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AbstractLimitValueBaseType" abstract="true" />
+  <xs:complexType name="AmountLimitValueType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:AbstractLimitValueBaseType">
+        <xs:sequence>
+          <xs:element xmlns:q1="http://ws.ips.mastercardworldwide.com/type/currency/v1" minOccurs="0" maxOccurs="1" name="amount" type="q1:CurrencyAmountType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CountLimitValueType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:AbstractLimitValueBaseType">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="limitCount" type="xs:unsignedShort" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="AbstractCardLimitOverrideBaseType" abstract="true">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="limitValue" type="tns:AbstractLimitValueBaseType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CardIndefiniteLimitOverrideType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:AbstractCardLimitOverrideBaseType" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CardTemporaryLimitOverrideType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:AbstractCardLimitOverrideBaseType">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="startDate" type="xs:date" />
+          <xs:element minOccurs="1" maxOccurs="1" name="endDate" type="xs:date" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="LimitFrequencyInfoType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="limitFrequencyCode" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="limitFrequencyCount" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PinChangeDetailType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="updatedBy" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="channel" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="updatedDate" type="xs:date" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfSystemEventType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="systemEvent" type="tns:SystemEventType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SystemEventType">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="eventDate" type="xs:date" />
+      <xs:element minOccurs="0" maxOccurs="1" name="eventDescription" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="eventCode" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="channelId" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="auditId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfSystemEventV1R1Type">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="systemEvent" type="tns:SystemEventV1R1Type" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SystemEventV1R1Type">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="eventDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" maxOccurs="1" name="eventDescription" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="eventCode" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="channelId" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="auditId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfString2">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="authTreatment" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ChipType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="currentChipType" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="currentChipFormat" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="previousChipType" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="previousChipFormat" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CardInfoV1R3Type">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="cardNumber" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="previousCardNumber" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="plasticIssueReasonCode" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="previousCardExpirationDate" type="xs:date" />
+      <xs:element minOccurs="0" maxOccurs="1" name="cardStatusCode" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="cardReasonCode" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="cardHistory" type="tns:CardHistoryType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="cardScheduled" type="tns:CardScheduledType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="cardEmbossing" type="tns:CardEmbossingType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="activationInfo" type="tns:ActivationInfoType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="pinFailureCount" type="xs:unsignedShort" />
+      <xs:element minOccurs="0" maxOccurs="1" name="compromisedCardIndicator" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="1" name="pictureReferenceId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CardInfoV1R7Type">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="cardNumber" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="cardProxy" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="previousCardNumber" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="plasticIssueReasonCode" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="previousCardExpirationDate" type="xs:date" />
+      <xs:element minOccurs="0" maxOccurs="1" name="cardStatusCode" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="cardReasonCode" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="cardHistory" type="tns:CardHistoryType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="cardScheduled" type="tns:CardScheduledType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="cardEmbossing" type="tns:CardEmbossingType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="activationInfo" type="tns:ActivationInfoType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="pinFailureCount" type="xs:unsignedShort" />
+      <xs:element minOccurs="0" maxOccurs="1" name="compromisedCardIndicator" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="1" name="pictureReferenceId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfAlertPreferencesType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="preferences" type="tns:AlertPreferencesType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AlertPreferencesType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="alertType" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="optIn" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="1" name="triggerAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" maxOccurs="1" name="triggerAmountMaintainable" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="1" name="triggerAmountAllowed" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="1" name="triggerCount" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="triggerCountMaintainable" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="1" name="triggerCountAllowed" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="1" name="triggerDate" type="xs:date" />
+      <xs:element minOccurs="0" maxOccurs="1" name="triggerDateMaintainable" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="1" name="triggerDateAllowed" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="1" name="alertUse" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="alertCurrency" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="distributionChannel" type="tns:DistributionChannelType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="alertDescription" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="DistributionChannelType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="E" />
+      <xs:enumeration value="T" />
+      <xs:enumeration value="B" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ArrayOfCardStatusSummaryType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="cardStatusSummary" type="tns:CardStatusSummaryType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CardStatusSummaryType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="cardNumber" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="cardStatusCode" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CurrentChipType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="currentChipType" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="currentChipFormat" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CurrencyRiskFactorType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="currencyCode" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="conversionRate" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="conversionExponent" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ScriptDataType">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="expirationDate" type="xs:date" />
+      <xs:element minOccurs="0" maxOccurs="1" name="scriptTypes" type="tns:ArrayOfString" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfString">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="scriptType" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SendScriptDataType">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="dateTime" type="xs:dateTime" />
+      <xs:element minOccurs="1" maxOccurs="1" name="expirationDate" type="xs:date" />
+      <xs:element minOccurs="0" maxOccurs="1" name="scriptType" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="amount" type="xs:decimal" />
+      <xs:element minOccurs="0" maxOccurs="1" name="count" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="scriptStatus" type="tns:ScriptStatusType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="ScriptStatusType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="P" />
+      <xs:enumeration value="F" />
+      <xs:enumeration value="S" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="EncryptedPinType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="encryptionKeyName" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="ResponseCardIdentifierType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CARD" />
+      <xs:enumeration value="PROXY" />
+      <xs:enumeration value="BOTH" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ArrayOfNewCardLimitType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="cardLimit" type="tns:NewCardLimitType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NewCardLimitType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="cardLimitOverride" type="tns:AbstractCardLimitOverrideBaseType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="limitKey" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfString4">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="limitKey" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="ProxyType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CARD" />
+      <xs:enumeration value="ACCOUNT" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ArrayOfRelatedAccountV1R1Type">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="relatedAccountV1R1" type="tns:RelatedAccountV1R1Type" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RelatedAccountV1R1Type">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="relatedAccountNumber" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="relatedAccountTypeCode" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="relatedAccountProductCode" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="nickname" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="UnloadCashoutCodeType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="UNLOAD" />
+      <xs:enumeration value="CASHOUT" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="EncryptedDataFieldType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="encryptionKeyName" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfString5">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="cardProxy" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

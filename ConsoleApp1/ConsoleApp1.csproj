@@ -1,0 +1,1379 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F58F2516-7C01-4B70-9BD5-0D6634CD0B05}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ConsoleApp1</RootNamespace>
+    <AssemblyName>ConsoleApp1</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connected Services\CardServiceClient\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Connected Services\CardServiceClient\CardV1Service.wsdl" />
+    <None Include="Connected Services\CardServiceClient\CardV1Service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CardServiceClient\CardV1Service1.wsdl" />
+    <None Include="Connected Services\CardServiceClient\CardV1Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CardServiceClient\CardV1Service10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CardServiceClient\CardV1Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CardServiceClient\CardV1Service12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CardServiceClient\CardV1Service13.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CardServiceClient\CardV1Service14.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CardServiceClient\CardV1Service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CardServiceClient\CardV1Service3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CardServiceClient\CardV1Service4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CardServiceClient\CardV1Service5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CardServiceClient\CardV1Service6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CardServiceClient\CardV1Service7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CardServiceClient\CardV1Service8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CardServiceClient\CardV1Service9.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.activateAnonymousCardOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.ActivateAnonymousCardOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.activateAnonymousCardV1R1Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.ActivateAnonymousCardV1R1OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.activateCardAndSelectPinOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.ActivateCardAndSelectPinOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.activateCardOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.ActivateCardOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.activateCardV1R1Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.ActivateCardV1R1OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.activateCardWithValidationOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.ActivateCardWithValidationOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.activateCardWithValidationV1R1Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.ActivateCardWithValidationV1R1OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.activateOrSuspendTokenOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.ActivateOrSuspendTokenOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.activateOrSuspendTokenV1R1Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.ActivateOrSuspendTokenV1R1OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.activatePrepaidCardWithCVC2ValidationOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.ActivatePrepaidCardWithCVC2ValidationOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.addCardOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.AddCardOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.addCardV1R1Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.AddCardV1R1OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.addCardV1R2Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.AddCardV1R2OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.addCardV1R3Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.AddCardV1R3OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.addCardV1R4Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.AddCardV1R4OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.addEventOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.AddEventOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.addEventV1R1Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.AddEventV1R1OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.changeAuthTreatmentsOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.ChangeAuthTreatmentsOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.changeCardSpendingLimitsOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.ChangeCardSpendingLimitsOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.changeCardStatusOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.ChangeCardStatusOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.changeCardStatusV1R1Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.ChangeCardStatusV1R1OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.changeCardStatusV1R2Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.ChangeCardStatusV1R2OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.changeCardStockOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.changeCardStockOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.changeCardStockV1R1Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.ChangeCardStockV1R1OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.changeFeePackageOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.ChangeFeePackageOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.changeFeePackageV1R1Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.ChangeFeePackageV1R1OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.changeLimitPackageOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.ChangeLimitPackageOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.changePlasticTypeOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.ChangePlasticTypeOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.changeProgramTypeOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.changeProgramTypeOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.changeProgramTypeV1R1Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.changeProgramTypeV1R1OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.closeCardOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.CloseCardOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.closeCardV1R1Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.CloseCardV1R1OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.createCardHolderAccountAndLinkPreIssuedDebitCardOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.CreateCardHolderAccountAndLinkPreIssuedDebitCardOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.createCardHolderCardAccountOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.CreateCardHolderCardAccountOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.createCardHolderCardAccountV1R10Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.CreateCardHolderCardAccountV1R10OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.createCardHolderCardAccountV1R2Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.CreateCardHolderCardAccountV1R2OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.createCardHolderCardAccountV1R3Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.CreateCardHolderCardAccountV1R3OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.createCardHolderCardAccountV1R4Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.CreateCardHolderCardAccountV1R4OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.createCardHolderCardAccountV1R5Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.CreateCardHolderCardAccountV1R5OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.createCardHolderCardAccountV1R6Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.CreateCardHolderCardAccountV1R6OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.createCardHolderCardAccountV1R7Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.CreateCardHolderCardAccountV1R7OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.createCardHolderCardAccountV1R8Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.CreateCardHolderCardAccountV1R8OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.createCardHolderCardAccountV1R9Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.CreateCardHolderCardAccountV1R9OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.createCardHolderDebitCardAccountWithTemporaryAddressOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.CreateCardHolderDebitCardAccountWithTemporaryAddressOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.createCardHolderDebitCardAccountWithTemporaryAddressV1R1Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.CreateCardHolderDebitCardAccountWithTemporaryAddressV1R1OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.createCardHolderDebitCardAccountWithTemporaryAddressV1R2Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.CreateCardHolderDebitCardAccountWithTemporaryAddressV1R2OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.createCardHolderDebitCardAccountWithTemporaryAddressV1R3Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.CreateCardHolderDebitCardAccountWithTemporaryAddressV1R3OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.createCardHolderDebitCardAccountWithTemporaryAddressV1R4Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.CreateCardHolderDebitCardAccountWithTemporaryAddressV1R4OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.createCardHolderDebitCardAccountWithTemporaryAddressV1R5Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.CreateCardHolderDebitCardAccountWithTemporaryAddressV1R5OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.createCardHolderDebitCardAccountWithTemporaryAddressV1R6Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.CreateCardHolderDebitCardAccountWithTemporaryAddressV1R6OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.deleteCardSpendingLimitsOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.DeleteCardSpendingLimitsOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.deleteQueuedScriptOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.DeleteQueuedScriptOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.deleteQueuedScriptV1R1Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.DeleteQueuedScriptV1R1OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.findPrimaryCardOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.FindPrimaryCardOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.findPrimaryCardV1R1Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.FindPrimaryCardV1R1OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.getACHDetailsOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.GetACHDetailsOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.getACHDetailsV1R1Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.GetACHDetailsV1R1OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.getAlertPreferencesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.GetAlertPreferencesOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.getAlertPreferencesV1R1Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.GetAlertPreferencesV1R1OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.getAuthTreatmentsOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.GetAuthTreatmentsOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.getCardDetailsOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.GetCardDetailsOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.getCardDetailsUsingCardProxyOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.GetCardDetailsUsingCardProxyOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.getCardDetailsUsingCardProxyV1R1Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.GetCardDetailsUsingCardProxyV1R1OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.getCardDetailsUsingCardProxyV1R2Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.GetCardDetailsUsingCardProxyV1R2OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.getCardDetailsV1R10Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.GetCardDetailsV1R10OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.getCardDetailsV1R11Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.GetCardDetailsV1R11OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.getCardDetailsV1R1Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.GetCardDetailsV1R1OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.getCardDetailsV1R2Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.GetCardDetailsV1R2OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.getCardDetailsV1R3Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.GetCardDetailsV1R3OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.getCardDetailsV1R4Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.GetCardDetailsV1R4OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.getCardDetailsV1R5Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.GetCardDetailsV1R5OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.getCardDetailsV1R6Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.GetCardDetailsV1R6OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.getCardDetailsV1R7Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.GetCardDetailsV1R7OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.getCardDetailsV1R8Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.GetCardDetailsV1R8OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.getCardDetailsV1R9Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.GetCardDetailsV1R9OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.getCardListByCardHolderIdAndRelatedAccountNumberOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.GetCardListByCardHolderIdAndRelatedAccountNumberOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.getCardListByCardHolderIdAndRelatedAccountNumberV1R1Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.GetCardListByCardHolderIdAndRelatedAccountNumberV1R1OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.getCardListByCardHolderIdAndRelatedAccountNumberV1R2Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.GetCardListByCardHolderIdAndRelatedAccountNumberV1R2OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.getCardListByCardHolderIdOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.GetCardListByCardHolderIdOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.getCardListByCardHolderIdV1R1Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.GetCardListByCardHolderIdV1R1OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.getCardListByCardHolderIdV1R2Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.GetCardListByCardHolderIdV1R2OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.getCardListByCardNumberOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.GetCardListByCardNumberOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.getCardListByCardNumberV1R1Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.GetCardListByCardNumberV1R1OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.getCardListByRelatedAccountNumberOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.GetCardListByRelatedAccountNumberOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.getCardListByRelatedAccountNumberV1R1Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.GetCardListByRelatedAccountNumberV1R1OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.getCardListByRelatedAccountNumberV1R2Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.GetCardListByRelatedAccountNumberV1R2OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.getCardOrderDetailsOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.GetCardOrderDetailsOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.getCardOrderDetailsV1R1Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.GetCardOrderDetailsV1R1OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.getCardOrderDetailsV1R2Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.GetCardOrderDetailsV1R2OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.getCardsByProxyNumberOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.GetCardsByProxyNumberOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.getCardSpendingLimitsDetailsOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.GetCardSpendingLimitsDetailsOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.getCardStateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.GetCardStateOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.getCardStateV1R1Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.GetCardStateV1R1OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.getCardSummaryOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.GetCardSummaryOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.getCardSummaryV1R1Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.GetCardSummaryV1R1OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.getCardSummaryV1R2Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.GetCardSummaryV1R2OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.getCardSummaryV1R3Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.GetCardSummaryV1R3OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.getCardSummaryV1R4Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.GetCardSummaryV1R4OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.getCardTokensOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.GetCardTokensOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.getCHScriptQueueOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.GetCHScriptQueueOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.getCHScriptQueueV1R1Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.GetCHScriptQueueV1R1OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.getCHSentScriptsOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.GetCHSentScriptsOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.getCHSentScriptsV1R1Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.GetCHSentScriptsV1R1OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.getCVC2Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.GetCVC2OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.getCVC2V1R1Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.GetCVC2V1R1OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.getEMVCurrencyRiskFactorsPANOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.GetEMVCurrencyRiskFactorsPANOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.getEMVOfflineLimitsCHOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.GetEMVOfflineLimitsCHOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.getFeePackageOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.GetFeePackageOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.getPinDetailsOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.GetPinDetailsOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.getPinDetailsV1R1Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.GetPinDetailsV1R1OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.getSystemEventsOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.GetSystemEventsOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.getSystemEventsV1R1Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.GetSystemEventsV1R1OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.holdCardOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.HoldCardOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.holdCardV1R1Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.HoldCardV1R1OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.inactivateCardOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.InactivateCardOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.inactivateCardV1R1Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.InactivateCardV1R1OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.isCardReloadableOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.IsCardReloadableOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.isCardReloadableV1R1Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.IsCardReloadableV1R1OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.linkCardAndLoadValueOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.LinkCardAndLoadValueOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.linkCardAndLoadValueV1R1Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.LinkCardAndLoadValueV1R1OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.linkCardAndLoadValueV1R2Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.LinkCardAndLoadValueV1R2OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.linkCardAndLoadValueV1R3Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.LinkCardAndLoadValueV1R3OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.linkPreIssuedDebitCardToCardHolderOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.LinkPreIssuedDebitCardToCardHolderOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.loadReloadCardOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.LoadReloadCardOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.loadReloadCardV1R1Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.LoadReloadCardV1R1OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.loadReloadCardV1R2Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.LoadReloadCardV1R2OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.loadReloadCardV1R3Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.LoadReloadCardV1R3OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.loadReloadCardV1R4Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.LoadReloadCardV1R4OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.loadReloadCardV1R5Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.LoadReloadCardV1R5OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.loadReloadCardV1R6Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.LoadReloadCardV1R6OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.maintainAccountUpdaterOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.MaintainAccountUpdaterOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.maintainBillingUpdaterStatusOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.MaintainBillingUpdaterStatusOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.maintainRecurringPaymentCancellationOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.MaintainRecurringPaymentCancellationOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.maintainSharedPanOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.MaintainSharedPanOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.modifyEMVOfflineLimitsCHOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.ModifyEMVOfflineLimitsCHOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.pinValidationOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.pinValidationOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.pinValidationV1R1Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.pinValidationV1R1OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.reissueCardOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.ReissueCardOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.reissueCardV1R1Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.ReissueCardV1R1OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.reissueCardV1R2Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.ReissueCardV1R2OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.reissueCardV1R3Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.ReissueCardV1R3OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.reissueCardV1R4Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.ReissueCardV1R4OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.reissueCardV1R5Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.ReissueCardV1R5OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.replaceCardAndUpdateCardHolderDetailsOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.ReplaceCardAndUpdateCardHolderDetailsOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.replaceCardAndUpdateCardHolderDetailsV1R1Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.ReplaceCardAndUpdateCardHolderDetailsV1R1OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.replaceCardAndUpdateCardHolderDetailsV1R2Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.ReplaceCardAndUpdateCardHolderDetailsV1R2OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.replaceCardOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.ReplaceCardOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.replaceCardV1R1Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.ReplaceCardV1R1OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.replaceCardV1R2Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.ReplaceCardV1R2OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.replaceCardV1R3Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.ReplaceCardV1R3OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.replaceCardV1R4Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.ReplaceCardV1R4OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.replaceCardV1R5Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.ReplaceCardV1R5OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.replaceCardV1R6Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.ReplaceCardV1R6OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.replaceCardV1R7Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.ReplaceCardV1R7OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.replaceCardWithEmbossNameAndAddressOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.ReplaceCardWithEmbossNameAndAddressOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.replaceCardWithEmbossNameAndAddressV1R1Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.ReplaceCardWithEmbossNameAndAddressV1R1OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.replaceCardWithEmbossNameAndAddressV1R2Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.ReplaceCardWithEmbossNameAndAddressV1R2OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.replaceCardWithEmbossNameAndAddressV1R3Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.ReplaceCardWithEmbossNameAndAddressV1R3OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.replaceCardWithEmbossNameAndAddressV1R4Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.ReplaceCardWithEmbossNameAndAddressV1R4OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.reportLostStolenCardOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.ReportLostStolenCardOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.reportLostStolenCardV1R1Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.ReportLostStolenCardV1R1OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.reportLostStolenCardV1R2Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.ReportLostStolenCardV1R2OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.reportLostStolenCardV1R3Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.ReportLostStolenCardV1R3OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.reportLostStolenCardV1R4Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.ReportLostStolenCardV1R4OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.reportLostStolenCardV1R5Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.ReportLostStolenCardV1R5OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.reportLostStolenCardV1R6Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.ReportLostStolenCardV1R6OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.reportLostStolenCardV1R7Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.ReportLostStolenCardV1R7OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.resetPinTriesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.ResetPinTriesOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.resetRejectedTransactionCountOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.ResetRejectedTransactionCountOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.selectPinAtSetupOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.SelectPinAtSetupOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.setAlertPreferencesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.SetAlertPreferencesOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.setAlertPreferencesV1R1Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.SetAlertPreferencesV1R1OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.setPinOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.SetPinOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.setToActiveCardOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.SetToActiveCardOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.setToActiveCardV1R1Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.SetToActiveCardV1R1OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.setToFraudCardOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.SetToFraudCardOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.setToFraudCardV1R1Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.SetToFraudCardV1R1OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.setToLostCardOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.SetToLostCardOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.setToLostCardV1R1Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.SetToLostCardV1R1OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.setToPotentialFraudCardOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.SetToPotentialFraudCardOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.setToPotentialFraudCardV1R1Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.SetToPotentialFraudCardV1R1OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.setToStolenCardOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.SetToStolenCardOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.setToStolenCardV1R1Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.SetToStolenCardV1R1OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.unloadCashoutCardOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.UnloadCashoutCardOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.unloadCashoutCardV1R1Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.UnloadCashoutCardV1R1OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.unloadCashoutCardV1R2Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.UnloadCashoutCardV1R2OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.unloadCashoutCardV1R3Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.UnloadCashoutCardV1R3OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.unloadCashoutCardWithPinValidationOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.UnloadCashoutCardWithPinValidationOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.unloadCashoutCardWithPinValidationV1R1Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.UnloadCashoutCardWithPinValidationV1R1OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.updateAccountAddressOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.UpdateAccountAddressOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.updateAllPinsOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.updateAllPinsOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.updateAllPinsV1R1Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.updateAllPinsV1R1OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.updateCardDetailsOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.UpdateCardDetailsOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.updateCardDetailsV1R1Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.UpdateCardDetailsV1R1OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.updateCardDetailsV1R2Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.UpdateCardDetailsV1R2OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.updateCardDetailsV1R3Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.UpdateCardDetailsV1R3OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.updateCardEmbossNameOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.UpdateCardEmbossNameOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.updateCardEmbossNameV1R1Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.UpdateCardEmbossNameV1R1OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.updateCardManualPurgeIndicatorOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.UpdateCardManualPurgeIndicatorOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.updateCardPinOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.updateCardPinOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.updateEmbossIdentifierOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.UpdateEmbossIdentifierOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.updateNameAddressActivateCardOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.UpdateNameAddressActivateCardOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.updatePinOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.UpdatePinOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.updatePinV1R1Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.updatePinV1R1OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.validateCVC2AndGetCustomerTypeOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.ValidateCVC2AndGetCustomerTypeOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.validateCVC2Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.validateCVC2OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.validateCVC2V1R1Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.validateCVC2V1R1OutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.verifyPinOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CardServiceClient\ConsoleApp1.CardServiceClient.VerifyPinOutputType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\CardServiceClient\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\CardServiceClient\CardV1Service.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\CardServiceClient\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\CardServiceClient\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\CardServiceClient\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
